@@ -1,0 +1,64 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "image": "https://i.ibb.co/Vj7Dx1z/Rectangle-15-copy.jpg",
+            "title": "ELLERY X M'O CAPSULE",
+            "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "price": 53,
+            "color": "red",
+            "size": "XL",
+            "quantity": 1
+        },
+        {
+            "id": 2,
+            "image": "https://i.ibb.co/tLBKc3Z/Image-2.png",
+            "title": "ELLERY X M'O CAPSULE",
+            "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "price": 52,
+            "color": "red",
+            "size": "XL",
+            "quantity": 1
+        },
+        {
+            "id": 3,
+            "image": "https://i.ibb.co/HG1tPsn/Rectangle-15-copy.png",
+            "title": "ELLERY X M'O CAPSULE",
+            "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "price": 52,
+            "color": "red",
+            "size": "XL",
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "image": "https://i.ibb.co/p334Mcs/Image.png",
+            "title": "ELLERY X M'O CAPSULE",
+            "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "price": 52,
+            "color": "green",
+            "size": "XL",
+            "quantity": 2
+        },
+        {
+            "id": 5,
+            "image": "https://i.ibb.co/mq0wgHS/Rectangle-15-copy-1.png",
+            "title": "ELLERY X M'O CAPSULE",
+            "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "price": 52,
+            "color": "red",
+            "size": "XXL",
+            "quantity": 2
+        },
+        {
+            "id": 6,
+            "image": "https://i.ibb.co/0nrvN1H/Image-1.png",
+            "title": "ELLERY X M'O CAPSULE",
+            "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+            "price": 52,
+            "color": "blue",
+            "size": "XL",
+            "quantity": 1
+        }
+    ]
+}
