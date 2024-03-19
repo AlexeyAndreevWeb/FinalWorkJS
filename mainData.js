@@ -34,7 +34,7 @@ const renderCartItem = (card) => {
   cartItemList.insertAdjacentHTML(
     "beforeend",
     `
-    <li class="cart-item__card">
+    <li class="cart-item__card" id="${card.id}">
         <img class="cart-item__card__image" src="${card.image}" alt="">
         <div class="cart-item__card__info">
             <div class="cart-item__card__info-heading">
@@ -47,7 +47,7 @@ const renderCartItem = (card) => {
                 <span>Price: <span class="price">$${card.price}</span></span>
                 <span>Color: ${card.color}</span>
                 <span>Size: ${card.size}</span>
-                <span>Quantity: <span class="quantity">${card.quantity}</span></span>
+                <span>Quantity: <input class="quantity" type="number" name="Quantity" value="1" min="1" max="10"></span>
             </div>
         </div>
     </li>
@@ -58,36 +58,37 @@ const renderCartItem = (card) => {
 const createCartItems = (arr, data) => {
   arr.forEach((item, index) => {
     item.addEventListener("click", () => {
-
       if (!document.querySelector(".cart-item")) {
         document.querySelector(".feature").insertAdjacentHTML(
           "afterend",
           `
-                <div class="cart-item">
-                    <h3 class="cart-item__title">Cart Items</h3>
-                    <ul class="cart-item__list"></ul>
-                </div>
-            `
+                  <div class="cart-item">
+                      <h3 class="cart-item__title">Cart Items</h3>
+                      <ul class="cart-item__list"></ul>
+                  </div>
+              `
         );
-        renderCartItem(data[index]);
-      } else {
-        renderCartItem(data[index]);
       }
-      const cartItemsCloseBtn = document.querySelectorAll('.cart-item__card__info-close') 
-      deleteCartItem(cartItemsCloseBtn)
+      renderCartItem(data[index]);
+      const cartItems = document.querySelectorAll(".cart-item__card");
+      deleteCartItem(cartItems);
     });
   });
 };
-const deleteCartItem = arr => {
-    arr.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.target.parentNode.parentNode.parentNode.remove()
-            if(document.querySelectorAll('.cart-item__card').length === 0){
-                document.querySelector('.cart-item').remove()
-            }
-        })
-    })
-}
+
+const deleteCartItem = (arr) => {
+  arr.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      if (e.target.classList.contains("cart-item__card__info-close")) {
+        e.currentTarget.remove();
+      }
+      if (document.querySelectorAll(".cart-item__card").length < 1) {
+        document.querySelector(".cart-item").remove();
+      }
+    });
+  });
+};
+
 fetch("./db.json")
   .then((res) => res.json())
   .then((data) => {
